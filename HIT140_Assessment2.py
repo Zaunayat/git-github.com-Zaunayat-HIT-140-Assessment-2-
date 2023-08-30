@@ -5,21 +5,25 @@ import math
 import statistics as stats
 import matplotlib.pyplot as plt
 
+# Push the data file as numpy 
 
 p = np.genfromtxt('po1_data.txt', delimiter=',')
 
 print(p)
 
+#reading the data file as panda data framework 
 
 df = pd.DataFrame(p)
 
 print(df)
 
+#describing the summary of the data set
+
 df.describe()
 
 print(df.dtypes)
 
-
+#adding the column in the data from the instruction 
 
 df.info()
 
@@ -34,6 +38,7 @@ print(df)
 column_names = list(df.columns)
 df.isnull()
 
+#PD Indicator has null value so we disect the data set into two different sample size 
 
 df1 = df[df["PD indicator"] == 1]
 df0 = df[df["PD indicator"] == 0]
@@ -42,6 +47,7 @@ df0 = df[df["PD indicator"] == 0]
 print(df1)
 print(df0)
 
+#we i in range(1,28) is loop that iterates the numbers 1 to 27. it will analyse the column 1 to 17
 
 variable_analysis = []
 for i in range(1,28):

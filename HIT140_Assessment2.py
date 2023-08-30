@@ -85,13 +85,11 @@ for i in range(1,28):
     plt.ylabel("Frequency")
     plt.show()
 
-    # performing z-test for two sample size. 
-    # null hypothesis: mean of sample 1 = mean of sample 2
-    # alternative hypothesis: mean of sample 1 is not equal to mean of sample 2
-    # note the argument equal_var=False, which assumes that two populations do not have equal variance
+    # performing z-test for two sample size as the sample is independent, population is normally distributed, and sample size in large enough for central limit theoram
+    # h0 (Null Hypethesis) = mean of sample 1 = mean of sample 2
+    # h1 (Alternative Hypothesis) mean of sample 1 is not equal to mean of sample 2
+    # equal_var=False, indicates two populations do not have equal variance
     
-
-
 
     z_score = (x_bar1 - x_bar2) / np.sqrt((stdv1**2 / n1) + (stdv2**2 / n2))
     p_val = 2 * (1 - st.norm.cdf(np.abs(z_score)))
@@ -103,7 +101,7 @@ for i in range(1,28):
     print("\t p-value: %.4f" % p_val)
 
     print("\n Conclusion:")
-    if p_val < 0.05:
+    if p_val < 0.10:
       print("\t We reject the null hypothesis for", column_names[i])
     variable_analysis.append(column_names[i])
 else:

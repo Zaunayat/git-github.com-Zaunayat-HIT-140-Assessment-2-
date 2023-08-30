@@ -92,8 +92,8 @@ for i in range(1,28):
     plt.show()
 
     # performing z-test for two sample size as the sample is independent, population is normally distributed, and sample size in large enough for central limit theoram
-    # h0 (Null Hypethesis) = mean of sample 1 = mean of sample 2
-    # h1 (Alternative Hypothesis) mean of sample 1 is not equal to mean of sample 2
+    # h0 (Null Hypethesis): mean of sample 1 = mean of sample 2
+    # h1 (Alternative Hypothesis): mean of sample 1 is not equal to mean of sample 2
     # equal_var=False, indicates two populations do not have equal variance
     
 

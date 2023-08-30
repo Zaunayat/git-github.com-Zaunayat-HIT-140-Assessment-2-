@@ -23,8 +23,6 @@ print(df.dtypes)
 
 df.info()
 
-
-
 df.columns = ['subject identifier', ' jitter in %', 'absolt jitter in ms', 'jitter as r.a.p.', 'jitter as p.p.q.5','jitter as d.d.p.' ,
               'shimmer in %','absolt shimmer in dB', 'shimmer as a.p.q.3', 'shimmer as a.p.q.5','shimmer as a.p.q.11','shimmer as d.d.a', 
               'autocorrelation btwn NHR and HNR', 'NHR','HNR','median pitch','mean pitch','stdv of pitch','min pitch',
@@ -35,7 +33,6 @@ print(df)
 
 column_names = list(df.columns)
 df.isnull()
-
 
 
 df1 = df[df["PD indicator"] == 1]
